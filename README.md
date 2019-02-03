@@ -20,9 +20,9 @@ library(sourcerr)
 ```r
 ## Load in the libraries into the R session
 library(tidyverse)
-library(ape)
-library(MASS)
-library(crosstalk)
+library(ggplot2)
+library(glmnet)
+library(doParallel)
 
 ## Cite all loaded packages
 cite_packages(outfile = "../../Downloads/citations.bibtex",
