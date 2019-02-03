@@ -1,14 +1,11 @@
 ## Load a bunch of libraries
 library(tidyverse)
-library(ape)
-library(MASS)
-library(crosstalk)
+library(ggplot2)
+library(glmnet)
+library(doParallel)
 
-outfile = "../../Downloads/citations.html"
-format = "html"
-detaillevel = "loaded"
-
-cite_packages(outfile,
-              format,
-              detaillevel)
+## Cite all loaded packages
+cite_packages(outfile = "../../Downloads/citations.bibtex",
+              format = "bibtex",
+              detaillevel = "loaded")
 
