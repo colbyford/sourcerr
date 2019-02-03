@@ -2,7 +2,7 @@
 
 <h3 align = "right">Colby T. Ford, Ph.D.</h3>
 
-<img align="right" src="https://raw.githubusercontent.com/colbyford/sourcerr/master/img/sourcerr_hex.svg" alt="sourcerr icon" width="200">
+<img align="right" src="https://raw.githubusercontent.com/colbyford/sourcerr/master/img/sourcerr_hex.png" alt="sourcerr icon" width="200">
 
 [![CRAN status](https://www.r-pkg.org/badges/version/sourcerr)](https://cran.r-project.org/package=sourcerr)
 
@@ -13,4 +13,19 @@ You can install the latest stable version from GitHub using the following comman
 library(devtools)
 install_github("colbyford/sourcerr")
 library(sourcerr)
+```
+
+## Usage
+
+```r
+## Load in the libraries into the R session
+library(tidyverse)
+library(ape)
+library(MASS)
+library(crosstalk)
+
+## Cite all loaded packages
+cite_packages(outfile = "../../Downloads/citations.bibtex",
+              format = "bibtex",
+              detaillevel = "loaded")
 ```
