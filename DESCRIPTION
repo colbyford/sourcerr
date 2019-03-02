@@ -1,7 +1,7 @@
 Package: sourcerr
 Type: Package
 Title: Easily output package citations and session information for reproducibility in research publications.
-Version: 0.1.0
+Version: 0.1.1
 Author: Colby Ford
 Maintainer: Colby Ford <colby.ford@uncc.edu>
 Description: Easily output package citations and session information for reproducibility in research publications.

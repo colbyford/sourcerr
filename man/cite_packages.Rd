@@ -4,9 +4,12 @@
 \alias{cite_packages}
 \title{Generate citation list of all packages in a variety of formats.}
 \usage{
-cite_packages(outfile, format = "bibtex", detaillevel = "loaded")
+cite_packages(packages = c(), outfile, format = "bibtex",
+  detaillevel = "loaded")
 }
 \arguments{
+\item{packages}{(Optional) Vector of package names. If blank, the package will look to loaded packages to be included in the citation list.}
+
 \item{outfile}{Path and filename where the citation file should be written.}
 
 \item{format}{Output format of the citation file. Select from "bibtex", "latex", "html", or "text".}

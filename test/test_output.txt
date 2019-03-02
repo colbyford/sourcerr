@@ -1,0 +1,15 @@
+Wickham H, Francois R, Henry L and Müller K (2017). _dplyr: A Grammar of Data
+Manipulation_. R package version 0.7.4, <URL:
+https://CRAN.R-project.org/package=dplyr>.
+[1] "\n"
+Wickham H (2009). _ggplot2: Elegant Graphics for Data Analysis_. Springer-Verlag New
+York. ISBN 978-0-387-98140-6, <URL: http://ggplot2.org>.
+[1] "\n"
+Wickham H and Henry L (2018). _tidyr: Easily Tidy Data with 'spread()' and
+'gather()' Functions_. R package version 0.8.0, <URL:
+https://CRAN.R-project.org/package=tidyr>.
+[1] "\n"
+Corporation M and Weston S (2017). _doParallel: Foreach Parallel Adaptor for the
+'parallel' Package_. R package version 1.0.11, <URL:
+https://CRAN.R-project.org/package=doParallel>.
+[1] "\n"
