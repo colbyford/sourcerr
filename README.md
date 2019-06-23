@@ -1,4 +1,5 @@
-# *sourcerr* - Easily output package citations and session information for reproducibility in research publications.
+# *sourcerr*
+## Easily output package citations and session information for reproducibility in research publications.
 
 <h3 align = "right">Colby T. Ford, Ph.D.</h3>
 
