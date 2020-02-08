@@ -7,7 +7,7 @@
 #' Select "loaded" for all loaded packages, "associated" for all loaded packages + associated packages, or "all" to include base packages and all other packages in the session.
 #' @export cite_packages
 
-cite_packages <- function(packages = c(), outfile, format = "bibtex", detaillevel = "loaded"){
+cite_packages <- function(packages = c(), outfile = NULL, format = "bibtex", detaillevel = "loaded"){
   ## Capture current session information
   sessioninfo <- sessionInfo()
 
@@ -34,8 +34,25 @@ cite_packages <- function(packages = c(), outfile, format = "bibtex", detailleve
   ## Remove `sourcerr` from packages list
   packages <- packages[which(packages != "sourcerr")]
 
-  ## Start capturing print output
-  capture.output(
+  if (!is.null(outfile)){
+    ## Start capturing print output
+    capture.output(
+      for (i in 1:length(packages)){
+        package <- packages[i]
+        citation <- citation(package = package)
+
+        if (format == "text"){
+          print(citation, style = "text")
+        } else if (format == "bibtex"){
+          print(citation, style = "Bibtex")
+        } else if (format == "html"){
+          print(citation, style = "html")
+        } else if (format == "latex"){
+          print(citation, style = "latex")
+        }
+      },
+      file = outfile) ## Write file to outfile parameter
+  } else {
     for (i in 1:length(packages)){
       package <- packages[i]
       citation <- citation(package = package)
@@ -49,7 +66,8 @@ cite_packages <- function(packages = c(), outfile, format = "bibtex", detailleve
       } else if (format == "latex"){
         print(citation, style = "latex")
       }
-    },
-    file = outfile) ## Write file to outfile parameter
+      cat("\n")
+    }
+  }
 
 }
